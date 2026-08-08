@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTK SUCCESS | หน้าแรก</title>
+  <style>
+    :root {
+      --primary: #2b7af0;
+      --primary-dark: #1c52a3;
+      --text: #181818;
+      --muted: #6b7280;
+      --bg: #f7faff;
+      --line: #e8eef8;
+      --shadow: 0 10px 30px rgba(28, 82, 163, 0.10);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; color: var(--text); background: var(--bg); }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1180px, 92%); margin: 0 auto; }
+    .topbar { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 14px 0; }
+    .brand { font-weight: 700; color: var(--primary-dark); font-size: 22px; }
+    .nav { display: flex; gap: 10px; flex-wrap: wrap; }
+    .nav a { padding: 10px 16px; border-radius: 999px; }
+    .nav a.active, .nav a:hover { background: var(--primary); color: #fff; }
+    .hero { padding: 70px 0; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; }
+    .card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .hero-card {
+      padding: 40px;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:
+        linear-gradient(rgba(255,255,255,.90), rgba(255,255,255,.95)),
+        url('https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    }
+    .eyebrow { display: inline-block; background: #eaf2ff; color: var(--primary-dark); padding: 8px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; margin-bottom: 16px; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); margin: 0 0 10px; color: var(--primary-dark); }
+    h2 { color: var(--primary-dark); }
+    p { line-height: 1.7; }
+    .slogan { font-weight: 700; color: var(--primary-dark); margin-bottom: 14px; }
+    .btn-row { display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+    .btn { padding: 12px 20px; border-radius: 999px; font-weight: 700; display: inline-block; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-secondary { border: 1px solid #dce8ff; background:#fff; color: var(--primary-dark); }
+    .panel { padding: 24px; }
+    .footer { background: var(--primary-dark); color: #fff; padding: 30px 0; margin-top: 40px; }
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .topbar-inner { flex-direction: column; }
+    }
+  </style>
+
+<style>
+:root{
+  --primary:#2563eb!important;--primary-dark:#123b78!important;
+  --turquoise:#14b8a6;--turquoise2:#22d3c5;
+  --ink:#0b1736;--muted:#64748b;--bg:#f5fbff!important;--line:#dcecf2;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:
+ radial-gradient(circle at 10% 0%,rgba(34,211,197,.12),transparent 28%),
+ radial-gradient(circle at 90% 15%,rgba(37,99,235,.10),transparent 30%),
+ #f7fbff!important;color:var(--ink)!important}
+.topbar{position:sticky!important;top:0;z-index:1000;background:rgba(255,255,255,.88)!important;
+backdrop-filter:blur(18px);border-bottom:1px solid rgba(20,184,166,.18)!important;box-shadow:0 8px 30px rgba(15,45,90,.05)}
+.brand{font-weight:900!important;letter-spacing:.4px;color:#123b78!important}
+.brand:after{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--turquoise);margin-left:7px;box-shadow:0 0 0 5px rgba(20,184,166,.12)}
+.nav a{font-weight:700;transition:.2s ease}
+.nav a.active,.nav a:hover{background:linear-gradient(135deg,#2563eb,#14b8a6)!important;color:#fff!important;box-shadow:0 8px 20px rgba(20,184,166,.18)}
+.card,.album-card,.viewer{border:1px solid rgba(20,184,166,.13)!important;box-shadow:0 18px 45px rgba(18,59,120,.09)!important}
+h1,h2,h3{color:#123b78!important}
+.btn-primary{background:linear-gradient(135deg,#2563eb,#14b8a6)!important;color:#fff!important;box-shadow:0 12px 25px rgba(20,184,166,.22)}
+.btn-secondary{border:1px solid rgba(20,184,166,.35)!important}
+.ctk-kicker{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#e9fffb;color:#087f73;font-weight:800;font-size:13px}
+.ctk-kicker:before{content:"";width:8px;height:8px;border-radius:50%;background:#14b8a6}
+.ctk-section{padding:72px 0}
+.ctk-title{font-size:clamp(28px,4vw,44px);margin:10px 0 12px}
+.ctk-lead{color:#64748b;max-width:760px;line-height:1.8}
+.ctk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.ctk-feature{background:rgba(255,255,255,.9);border:1px solid #dcecf2;border-radius:22px;padding:24px;box-shadow:0 16px 35px rgba(18,59,120,.07);transition:.25s}
+.ctk-feature:hover{transform:translateY(-5px);border-color:rgba(20,184,166,.45)}
+.ctk-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,#e8f0ff,#d9fff8);font-size:23px;margin-bottom:16px}
+.ctk-feature p{color:#64748b}
+.ctk-band{background:linear-gradient(120deg,#0d2d5c 0%,#124d70 52%,#0f8f86 100%);color:#fff;border-radius:30px;padding:38px;position:relative;overflow:hidden}
+.ctk-band h2,.ctk-band h3{color:#fff!important}.ctk-band p{color:#d7f7f2}
+.ctk-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+.ctk-step{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);padding:18px;border-radius:18px}
+.ctk-step b{display:block;color:#6ff4df;font-size:13px;margin-bottom:7px}
+.ctk-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.ctk-stat{background:#fff;border:1px solid #dcecf2;border-radius:20px;padding:22px;text-align:center}
+.ctk-stat strong{display:block;font-size:28px;color:#0f8f86}.ctk-stat span{color:#64748b;font-size:13px}
+.footer{background:linear-gradient(120deg,#0b2853,#0d5367)!important}
+@media(max-width:900px){.ctk-grid{grid-template-columns:1fr 1fr}.ctk-steps,.ctk-stats{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.ctk-grid,.ctk-steps,.ctk-stats{grid-template-columns:1fr}.ctk-section{padding:48px 0}.ctk-band{padding:25px}}
+</style>
+
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="index.html" class="brand">CTK SUCCESS</a>
+    <nav class="nav">
+      <a class="active" href="index.html">หน้าแรก</a>
+      <a href="services.html">บริการ</a>
+      <a href="portfolio.html">ผลงาน</a>
+      <a href="contact.html">ติดต่อ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:32px;">
+  <div class="container hero-grid">
+    <div class="hero-card card">
+      <span class="ctk-kicker">COMPLETE IT & INFRASTRUCTURE SOLUTIONS</span><h1>เราเป็นผู้เชี่ยวชาญด้านไอที</h1>
+      <p class="slogan">Think quality, Think of us</p>
+      <p>ให้บริการด้านไอทีครบวงจร เช่น Network, Server, Firewall, Fiber และ CCTV พร้อมออกแบบ ติดตั้ง และดูแลระบบโดยทีมงานมืออาชีพ</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="portfolio.html">ดูผลงาน</a>
+        <a class="btn btn-secondary" href="contact.html">ติดต่อเรา</a>
+      </div>
+    </div>
+
+    <div class="card panel">
+      <h2>จุดเด่นของเรา</h2>
+      <p>เรามุ่งเน้นพัฒนาศักยภาพของทีมงาน เพื่อให้งานออกมามีคุณภาพสูงสุด พร้อมบริการที่รวดเร็ว เชื่อถือได้ และตอบโจทย์การใช้งานจริงของลูกค้า</p>
+      <img src="images/whychooseus/whychooseus.jpg" 
+     alt="team" 
+     style="border-radius:16px; margin-top:16px;">
+    </div>
+  </div>
+</section>
+
+
+<section class="ctk-section" style="padding-top:10px">
+  <div class="container">
+    <div class="ctk-stats">
+      <div class="ctk-stat"><strong>7+</strong><span>กลุ่มบริการครบวงจร</span></div>
+      <div class="ctk-stat"><strong>IT</strong><span>Network • Server • Firewall</span></div>
+      <div class="ctk-stat"><strong>24/7</strong><span>ระบบที่ออกแบบเพื่อใช้งานจริง</span></div>
+      <div class="ctk-stat"><strong>CTK</strong><span>Think quality, Think of us</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ctk-section">
+  <div class="container">
+    <span class="ctk-kicker">OUR SERVICES</span>
+    <h2 class="ctk-title">โซลูชันที่มากกว่าการติดตั้ง</h2>
+    <p class="ctk-lead">ดูแลตั้งแต่สำรวจพื้นที่ ออกแบบระบบ เลือกอุปกรณ์ ติดตั้ง ทดสอบ ไปจนถึงดูแลหลังส่งมอบ เพื่อให้ระบบเหมาะกับการใช้งานของแต่ละองค์กร</p>
+    <div class="ctk-grid">
+      <div class="ctk-feature"><div class="ctk-icon">◉</div><h3>CCTV SYSTEM</h3><p>ระบบกล้องวงจรปิด IP / NVR พร้อมดูภาพระยะไกลและออกแบบจุดติดตั้งให้ครอบคลุมพื้นที่</p></div>
+      <div class="ctk-feature"><div class="ctk-icon">⌁</div><h3>NETWORK & WIFI</h3><p>LAN, Wi‑Fi, Access Point และระบบเครือข่ายสำหรับสำนักงาน อาคาร และพื้นที่ใช้งานขนาดใหญ่</p></div>
+      <div class="ctk-feature"><div class="ctk-icon">▣</div><h3>SERVER & FIREWALL</h3><p>ออกแบบโครงสร้างระบบ Server, Firewall และ IT Infrastructure ให้เหมาะกับองค์กร</p></div>
+      <div class="ctk-feature"><div class="ctk-icon">↯</div><h3>FIBER OPTIC</h3><p>วางระบบ Fiber Optic เชื่อมต่ออาคารและจุดใช้งานที่ต้องการความเร็วและเสถียรภาพ</p></div>
+      <div class="ctk-feature"><div class="ctk-icon">⚙</div><h3>IT SUPPORT</h3><p>ดูแล แก้ไข และบำรุงรักษาระบบไอที เพื่อให้ระบบพร้อมใช้งานอย่างต่อเนื่อง</p></div>
+      <div class="ctk-feature"><div class="ctk-icon">＋</div><h3>MORE SERVICES</h3><p>จัดหาอุปกรณ์คอมพิวเตอร์ รวมถึงบริการทำความสะอาดและดูแลสวนสำหรับองค์กร</p></div>
+    </div>
+    <div style="margin-top:24px"><a class="btn btn-primary" href="services.html">ดูบริการทั้งหมด →</a></div>
+  </div>
+</section>
+
+<section class="ctk-section" style="padding-top:10px">
+  <div class="container">
+    <div class="ctk-band">
+      <span class="ctk-kicker" style="background:rgba(255,255,255,.12);color:#8ff7e7">HOW WE WORK</span>
+      <h2 class="ctk-title">ตั้งแต่สำรวจหน้างานจนถึงดูแลหลังส่งมอบ</h2>
+      <p>ทุกงานเริ่มจากความต้องการจริงของลูกค้า ไม่ใช่การนำอุปกรณ์ชุดเดียวไปใช้กับทุกพื้นที่</p>
+      <div class="ctk-steps">
+        <div class="ctk-step"><b>01 / SURVEY</b><h3>สำรวจหน้างาน</h3><p>เก็บข้อมูลพื้นที่และความต้องการ</p></div>
+        <div class="ctk-step"><b>02 / DESIGN</b><h3>ออกแบบระบบ</h3><p>วางโครงสร้างและเลือกอุปกรณ์</p></div>
+        <div class="ctk-step"><b>03 / INSTALL</b><h3>ติดตั้ง & ทดสอบ</h3><p>ติดตั้งอย่างเป็นระบบและตรวจสอบการทำงาน</p></div>
+        <div class="ctk-step"><b>04 / SUPPORT</b><h3>ส่งมอบ & ดูแล</h3><p>แนะนำการใช้งานและบริการหลังการขาย</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ctk-section">
+  <div class="container">
+    <span class="ctk-kicker">OUR WORK</span>
+    <h2 class="ctk-title">ผลงานจากงานติดตั้งจริง</h2>
+    <p class="ctk-lead">รวมงาน Network, CCTV, Smart Parking, Wi‑Fi Hotspot, Cleaning และ Gardening สามารถเปิดดูรูปเพิ่มเติมในหน้า Portfolio ได้</p>
+    <div class="ctk-grid">
+      <a class="ctk-feature" href="portfolio.html"><div class="ctk-icon">⌘</div><h3>NETWORK SYSTEM</h3><p>ระบบเครือข่ายและโครงสร้างพื้นฐาน</p></a>
+      <a class="ctk-feature" href="portfolio.html"><div class="ctk-icon">◉</div><h3>CCTV SYSTEM</h3><p>ระบบรักษาความปลอดภัยและกล้องวงจรปิด</p></a>
+      <a class="ctk-feature" href="portfolio.html"><div class="ctk-icon">⌁</div><h3>WIFI HOTSPOT</h3><p>ระบบอินเทอร์เน็ตและการกระจายสัญญาณ</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="ctk-section" style="padding-top:0">
+  <div class="container">
+    <div class="ctk-band">
+      <h2 style="font-size:clamp(28px,4vw,42px);margin-top:0">กำลังวางแผนระบบ IT สำหรับองค์กร?</h2>
+      <p>พูดคุยกับ CTK SUCCESS เพื่อประเมินแนวทางและเลือกโซลูชันที่เหมาะกับพื้นที่ใช้งาน</p>
+      <div class="btn-row"><a class="btn" style="background:#fff;color:#0d5367" href="contact.html">ติดต่อเรา</a><a class="btn" style="border:1px solid rgba(255,255,255,.4);color:#fff" href="portfolio.html">ดูผลงาน</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <h3>ติดต่อเรา</h3>
+    <p><strong>บริษัท ซีทีเค ซัคเซซ จำกัด (สำนักงานใหญ่)</strong></p>
+    <p>115 หมู่ 7 ตำบลทะเลชุบศร อำเภอเมือง จังหวัดลพบุรี 15000</p>
+    <p>โทร: 036-680750</p>
+    <p>อีเมล: info@ctksuccess.co.th</p>
+    <p>Facebook: CTK Success co.,ltd.</p>
+    <p>YouTube: @CTKsuccess</p>
+    <p>TikTok: @ctk.success</p>
+    <p>เว็บไซต์: ctksuccess.co.th</p>
+  </div>
+</footer>
+</body>
+</html>
